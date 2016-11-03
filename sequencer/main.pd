@@ -1,1 +1,360 @@
-#N canvas 222 50 1261 658 10;
+#N canvas 378 130 1370 718 10;
+#X obj 163 427 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 11112 1;
+#X obj 260 419 vsl 15 128 1 20 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3426 1;
+#X floatatom 260 568 5 0 0 0 - - -, f 5;
+#X floatatom 464 202 5 0 0 0 - - -, f 5;
+#X floatatom 163 572 5 0 0 0 - - -, f 5;
+#N canvas 381 96 415 596 metronome 0;
+#X obj 68 226 snapshot~;
+#X obj 94 191 bang~;
+#X obj 81 274 i;
+#X obj 68 323 change;
+#X floatatom 68 130 5 0 0 0 - - -, f 5;
+#X floatatom 63 71 5 0 350 0 - - -, f 5;
+#X obj 64 100 / 60;
+#X msg 132 61 0;
+#X obj 117 20 loadbang;
+#X obj 68 158 phasor~ 1;
+#X msg 93 50 60;
+#X obj 48 19 inlet;
+#X obj 65 378 outlet;
+#X text 124 279 divide clock into steps;
+#X obj 81 252 * 120;
+#X obj 81 296 / 120;
+#X connect 0 0 14 0;
+#X connect 1 0 0 0;
+#X connect 2 0 15 0;
+#X connect 3 0 12 0;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 9 1;
+#X connect 8 0 7 0;
+#X connect 8 0 10 0;
+#X connect 9 0 0 0;
+#X connect 10 0 5 0;
+#X connect 11 0 5 0;
+#X connect 14 0 2 0;
+#X connect 15 0 3 0;
+#X restore 73 75 pd metronome;
+#X obj 450 111 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 302 92 r beat-clock;
+#X obj 432 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 440 69 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 442 91 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 462 70 start;
+#X text 455 47 stop;
+#X text 466 92 start on next beat;
+#X text 474 112 loop;
+#X floatatom 67 43 5 0 0 0 - - -, f 5;
+#X obj 187 605 -;
+#X floatatom 188 640 50 0 0 0 - - -, f 50;
+#X msg 118 51 0;
+#X obj 69 104 s beat-clock;
+#X obj 870 235 text define -k seq-1;
+#A set 0 length 23.0333 \; 1 note 72 100 \; 1.24167 note 74 100 \;
+1.25833 note 72 0 \; 1.48333 note 74 0 \; 1.49167 note 76 100 \; 1.71667
+note 76 0 \; 2.00833 note 76 100 \; 2.525 note 76 0 \; 3.025 note 76
+100 \; 3.275 note 74 100 \; 3.31667 note 76 0 \; 3.525 note 72 100
+\; 3.525 note 74 0 \; 3.79167 note 72 0 \; 3.79167 note 74 100 \; 4.28333
+note 74 0 \; 5.05833 note 79 100 \; 5.3 note 77 100 \; 5.35 note 79
+0 \; 5.55833 note 76 100 \; 5.60833 note 77 0 \; 5.825 note 76 0 \;
+6.06667 note 76 100 \; 6.30833 note 77 100 \; 6.34167 note 76 0 \;
+6.54167 note 76 100 \; 6.58333 note 77 0 \; 6.80833 note 76 0 \; 7.05
+note 74 100 \; 7.51667 note 74 0 \; 7.775 note 72 100 \; 8.03333 note
+72 0 \; 8.98333 note 67 100 \; 8.99167 note 60 100 \; 9 note 64 100
+\; 9.45 note 60 0 \; 9.45833 note 67 0 \; 9.46667 note 72 100 \; 9.475
+note 64 0 \; 9.90833 note 72 0 \; 9.91667 note 74 100 \; 10.175 note
+74 0 \; 10.175 note 76 100 \; 10.4 note 72 100 \; 10.4 note 76 0 \;
+10.65 note 72 0 \; 10.6917 note 64 100 \; 10.7 note 67 100 \; 10.7083
+note 60 100 \; 11.4167 note 60 0 \; 11.425 note 67 0 \; 11.4417 note
+64 0 \; 11.9917 note 64 100 \; 12 note 60 100 \; 12.0083 note 67 100
+\; 12.425 note 60 0 \; 12.4417 note 64 0 \; 12.45 note 67 0 \; 12.9917
+note 65 100 \; 12.9917 note 62 100 \; 13 note 69 100 \; 13.425 note
+62 0 \; 13.4333 note 74 100 \; 13.4417 note 65 0 \; 13.45 note 69 0
+\; 13.875 note 76 100 \; 13.9167 note 74 0 \; 14.1417 note 77 100 \;
+14.1667 note 76 0 \; 14.375 note 74 100 \; 14.375 note 77 0 \; 14.675
+note 65 100 \; 14.6833 note 62 100 \; 14.6833 note 69 100 \; 14.6833
+note 74 0 \; 15.5583 note 62 0 \; 15.5583 note 69 0 \; 15.6083 note
+65 0 \; 16 note 62 100 \; 16 note 65 100 \; 16.0083 note 69 100 \;
+16.3333 note 62 0 \; 16.3417 note 69 0 \; 16.3417 note 65 0 \; 16.9583
+note 67 100 \; 16.9583 note 64 100 \; 16.975 note 71 100 \; 16.975
+note 79 100 \; 17.9667 note 67 0 \; 17.9667 note 79 0 \; 17.9667 note
+71 0 \; 17.975 note 64 0 \; 18.9 note 79 100 \; 18.9 note 64 100 \;
+18.9083 note 67 100 \; 18.9167 note 71 100 \; 19.1167 note 71 0 \;
+19.125 note 64 0 \; 19.125 note 67 0 \; 19.1333 note 79 0 \; 19.1583
+note 77 100 \; 19.35 note 77 0 \; 19.5833 note 76 100 \; 19.6083 note
+69 100 \; 19.6167 note 62 100 \; 19.6167 note 65 100 \; 19.825 note
+76 0 \; 19.825 note 69 0 \; 19.8417 note 65 0 \; 19.875 note 62 0 \;
+20.075 note 74 100 \; 20.35 note 74 0 \; 20.55 note 64 100 \; 20.55
+note 60 100 \; 20.55 note 67 100 \; 20.5583 note 72 100 \; 21.2417
+note 72 0 \; 21.35 note 60 0 \; 21.3833 note 64 0 \; 21.3917 note 67
+0 \;;
+#X msg 870 208 clear;
+#X obj 869 15 r notes;
+#N canvas 4 50 450 300 prepend-event-name 0;
+#X obj 103 169 list append;
+#X obj 145 61 t b a;
+#X msg 121 116 note;
+#X obj 151 20 inlet;
+#X obj 130 224 outlet;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 1 1 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X restore 888 69 pd prepend-event-name;
+#X obj 751 179 seq-recorder seq-1;
+#X obj 672 111 r beat-clock;
+#X obj 795 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 895 146 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 817 132 stop;
+#X text 916 146 arm;
+#X floatatom 754 224 5 0 0 0 - - -, f 5;
+#N canvas 8 50 1435 812 sounds 0;
+#X obj 499 619 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 499 673 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 777 662 catch~ samp_voice_out;
+#X obj 953 219 i;
+#X obj 73 511 loadbang;
+#X obj 499 642 sampler-voice metro1.wav 0;
+#X floatatom 490 550 5 0 0 0 - - -, f 5;
+#X obj 490 487 f 0;
+#X obj 502 443 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 414 612 sel 0;
+#X text 630 623 on click;
+#X text 621 675 on accent;
+#X obj 502 416 t b b;
+#X obj 525 486 + 1;
+#X floatatom 587 482 5 0 0 0 - - -, f 5;
+#X msg 405 431 0, f 4;
+#X obj 490 520 % 4;
+#X obj 953 166 r knob3;
+#X obj 1106 220 i;
+#X obj 184 54 r aux;
+#X obj 747 228 i;
+#X obj 747 175 r knob2;
+#X obj 770 722 throw~ outL;
+#X obj 879 719 throw~ outR;
+#X msg 807 405 2: Accent \$1;
+#X obj 807 430 s screenLine2;
+#X obj 1106 169 r knob4;
+#X obj 1106 292 s screenLine4;
+#X msg 953 267 3: Metro Tone \$1;
+#X obj 953 191 * 100;
+#X obj 1106 194 * 100;
+#X msg 1106 270 4: Synth Tone \$1;
+#X obj 747 200 * 11;
+#X obj 712 283 expr if($f1 <= 1 \, 0 \, $f1);
+#X obj 713 313 sel 0;
+#X obj 689 434 s screenLine2;
+#X msg 689 409 2: Accent Off;
+#X msg 634 361 1e+07;
+#X text 703 363 not really off \, just really long hahah;
+#X msg 300 761 0;
+#X obj 318 797 s led;
+#X obj 348 702 t b b;
+#X msg 479 753 3;
+#X msg 408 768 0;
+#X obj 426 804 s led;
+#X obj 456 709 t b b;
+#X msg 371 746 7;
+#X msg 33 252 0;
+#X obj 33 280 s led;
+#X obj 33 198 sel 0;
+#X obj 33 220 delay 200;
+#X obj 300 739 delay 50;
+#X obj 408 746 delay 50;
+#X obj 499 696 sampler-voice metro2.wav 6;
+#X msg 73 542 \; screenLine1 1: Tempo \; screenLine2 2: Accent 4 \;
+screenLine3 3: Metro Tone \; screenLine4 4: Synth Tone \; screenLine5
+Aux: Start / Stop \;;
+#X obj 747 250 change -1;
+#X obj 953 241 change -1;
+#X obj 1106 244 change -1;
+#X obj 953 289 s screenLine3;
+#X obj 293 103 r knob1;
+#X obj 293 125 * 250;
+#X obj 293 151 + 10;
+#X obj 372 212 i;
+#X obj 372 234 change -1;
+#X obj 110 218 i;
+#X obj 110 240 change -1;
+#X msg 372 258 \; screenLine1 1: Tempo \$1 BPM \;;
+#X msg 110 264 \; screenLine1 1: Tempo \$1 BPM MIDI \;;
+#X obj 184 139 t f b;
+#X obj 184 111 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 184 84 sel 1;
+#X text 408 45 a MIDI enabled metronome with simple synth for tuning
+up;
+#X text 688 153 knob 2 selects beat accent;
+#X text 383 327 reset counter on midi start;
+#X obj 153 337 i;
+#X obj 153 359 change -1;
+#X msg 153 383 \; screenLine1 1: Tempo \$1 BPM LINK \;;
+#X obj 466 171 <;
+#X obj 466 197 sel 1;
+#X obj 469 136 t f f;
+#X text 509 179 bang on next rollover \, top of beat;
+#X obj 458 102 r beat-clock;
+#X connect 0 0 5 0;
+#X connect 1 0 53 0;
+#X connect 2 0 22 0;
+#X connect 2 0 23 0;
+#X connect 3 0 56 0;
+#X connect 4 0 54 0;
+#X connect 6 0 0 0;
+#X connect 6 0 9 0;
+#X connect 7 0 13 0;
+#X connect 7 0 16 0;
+#X connect 8 0 7 0;
+#X connect 9 0 41 0;
+#X connect 9 1 45 0;
+#X connect 12 0 8 0;
+#X connect 13 0 7 1;
+#X connect 14 0 16 1;
+#X connect 15 0 7 1;
+#X connect 16 0 6 0;
+#X connect 17 0 29 0;
+#X connect 18 0 57 0;
+#X connect 19 0 70 0;
+#X connect 20 0 55 0;
+#X connect 21 0 32 0;
+#X connect 24 0 25 0;
+#X connect 26 0 30 0;
+#X connect 28 0 58 0;
+#X connect 29 0 3 0;
+#X connect 30 0 18 0;
+#X connect 31 0 27 0;
+#X connect 32 0 20 0;
+#X connect 33 0 34 0;
+#X connect 34 0 36 0;
+#X connect 34 0 37 0;
+#X connect 34 1 14 0;
+#X connect 34 1 24 0;
+#X connect 36 0 35 0;
+#X connect 37 0 14 0;
+#X connect 39 0 40 0;
+#X connect 41 0 51 0;
+#X connect 41 1 46 0;
+#X connect 42 0 44 0;
+#X connect 43 0 44 0;
+#X connect 45 0 52 0;
+#X connect 45 1 42 0;
+#X connect 46 0 40 0;
+#X connect 47 0 48 0;
+#X connect 49 0 50 0;
+#X connect 50 0 47 0;
+#X connect 51 0 39 0;
+#X connect 52 0 43 0;
+#X connect 55 0 33 0;
+#X connect 56 0 28 0;
+#X connect 57 0 31 0;
+#X connect 59 0 60 0;
+#X connect 60 0 61 0;
+#X connect 62 0 63 0;
+#X connect 63 0 66 0;
+#X connect 64 0 65 0;
+#X connect 65 0 67 0;
+#X connect 68 1 15 0;
+#X connect 69 0 68 0;
+#X connect 69 0 49 0;
+#X connect 70 0 69 0;
+#X connect 74 0 75 0;
+#X connect 75 0 76 0;
+#X connect 77 0 78 0;
+#X connect 78 0 12 0;
+#X connect 79 0 77 1;
+#X connect 79 1 77 0;
+#X connect 81 0 79 0;
+#X restore 71 140 pd sounds;
+#X obj 711 584 throw~ outL;
+#X obj 822 584 throw~ outR;
+#X obj 797 368 r notes;
+#X obj 747 453 pack 0 0 0, f 11;
+#X obj 351 231 route note;
+#X msg 162 43 100;
+#X obj 747 478 route 1 2 3 4, f 15;
+#X obj 746 425 poly 4 1, f 11;
+#X obj 383 298 bag;
+#X msg 402 265 flush;
+#X msg 375 323 \$1 0;
+#X obj 77 206 r knob1;
+#X obj 92 228 r knob2;
+#X obj 111 249 r knob3;
+#X obj 130 275 r knob4;
+#X obj 73 307 print;
+#X obj 842 508 voice;
+#X obj 799 507 voice;
+#X obj 747 505 voice;
+#X obj 893 508 voice;
+#X obj 351 349 s seq-notes;
+#X obj 351 267 t a a;
+#X obj 699 364 r seq-notes;
+#X obj 348 165 seq-player seq-1;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 16 1;
+#X connect 4 0 16 0;
+#X connect 5 0 19 0;
+#X connect 6 0 55 4;
+#X connect 7 0 55 0;
+#X connect 8 0 55 1;
+#X connect 9 0 55 2;
+#X connect 10 0 55 3;
+#X connect 15 0 5 0;
+#X connect 16 0 17 0;
+#X connect 18 0 5 0;
+#X connect 21 0 20 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 2;
+#X connect 24 0 30 0;
+#X connect 24 1 21 0;
+#X connect 25 0 24 0;
+#X connect 26 0 24 1;
+#X connect 27 0 24 3;
+#X connect 34 0 39 0;
+#X connect 35 0 38 0;
+#X connect 36 0 53 0;
+#X connect 37 0 5 0;
+#X connect 38 0 50 0;
+#X connect 38 1 49 0;
+#X connect 38 2 48 0;
+#X connect 38 3 51 0;
+#X connect 39 0 35 0;
+#X connect 39 1 35 1;
+#X connect 39 2 35 2;
+#X connect 40 0 42 0;
+#X connect 41 0 40 0;
+#X connect 42 0 52 0;
+#X connect 43 0 47 0;
+#X connect 44 0 47 0;
+#X connect 45 0 47 0;
+#X connect 46 0 47 0;
+#X connect 48 0 32 0;
+#X connect 48 0 33 0;
+#X connect 49 0 32 0;
+#X connect 49 0 33 0;
+#X connect 50 0 32 0;
+#X connect 50 0 33 0;
+#X connect 51 0 33 0;
+#X connect 51 0 32 0;
+#X connect 53 0 52 0;
+#X connect 53 1 40 0;
+#X connect 54 0 39 0;
+#X connect 55 0 1 0;
+#X connect 55 1 36 0;
+#X connect 55 2 41 0;
+#X connect 55 3 3 0;

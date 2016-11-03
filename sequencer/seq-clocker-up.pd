@@ -1,5 +1,5 @@
-#N canvas 6 50 965 592 10;
-#N canvas 5 50 1241 632 clock-control 0;
+#N canvas 7 50 965 592 10;
+#N canvas 6 50 1241 632 clock-control 0;
 #X obj 15 63 inlet;
 #X obj 297 57 inlet;
 #X obj 400 57 inlet;
@@ -72,7 +72,7 @@
 #X text 284 22 start;
 #X text 347 19 start on next beat;
 #X obj 236 342 spigot;
-#N canvas 221 50 1022 654 clocker 1;
+#N canvas 221 50 1022 654 clocker 0;
 #X obj 312 332 wrap;
 #X floatatom 339 413 5 0 0 0 - - -, f 5;
 #X obj 458 134 t b b;
@@ -147,7 +147,7 @@ to be 1 (top of first beat) \, so we wait for next tick.;
 #X text 8 56 this patch takes a 0-1 beat phase clock input and outputs
 a sequence clock of arbitrary length that is syncrhonized to the input
 clock., f 38;
-#X text 9 160, f 38;
+#X text 9 160 comment, f 38;
 #X text 9 120 this version just counts up., f 38;
 #X obj 291 106 t f b f;
 #X connect 0 0 6 0;
