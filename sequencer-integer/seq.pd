@@ -1,4 +1,4 @@
-#N canvas 350 108 1191 782 10;
+#N canvas 354 96 1191 782 10;
 #X msg 786 527 clear;
 #X msg 575 260 loop \$1;
 #X msg 638 261 quantize-length \$1;
@@ -8,8 +8,10 @@
 #X obj 223 495 seq-player \$1;
 #X obj 652 470 seq-recorder \$1;
 #X obj 786 554 text define -k \$1;
-#A set 0 length 1113 \; 0 note 60 100 \; 81 note 60 0 \; 366 note 62
-100 \; 450 note 62 0 \; 738 note 64 100 \; 832 note 64 0 \;;
+#A set 0 length 3191 \; 0 note 67 101 \; 0 note 71 101 \; 573 note
+67 0 \; 586 note 71 0 \; 639 note 72 100 \; 641 note 69 100 \; 1298
+note 69 0 \; 1311 note 72 0 \; 1414 note 74 100 \; 1417 note 71 100
+\; 2016 note 71 0 \; 2028 note 74 0 \;;
 #X obj 422 77 inlet;
 #X obj 658 79 inlet;
 #X obj 183 678 outlet;

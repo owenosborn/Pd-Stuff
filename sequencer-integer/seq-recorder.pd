@@ -1,4 +1,4 @@
-#N canvas 179 50 1120 804 10;
+#N canvas 184 50 1120 804 10;
 #N canvas 503 267 450 300 once 0;
 #X obj 109 71 inlet;
 #X obj 211 67 inlet;
@@ -21,7 +21,7 @@
 #X connect 8 0 4 1;
 #X restore 520 307 pd once;
 #X obj 824 725 outlet;
-#X obj 201 59 inlet;
+#X obj 202 60 inlet;
 #X text 118 54 beat clock;
 #X obj 480 240 spigot;
 #X obj 481 50 inlet;
