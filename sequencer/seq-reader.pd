@@ -14,7 +14,7 @@
 #X text 495 47 rewind;
 #X obj 563 692 outlet;
 #X msg 516 297 0;
-#X text 251 520 wait until sequcned clock advances then send out event
+#X text 251 520 waitt until sequcned clock advances then send out event
 and get next., f 26;
 #N canvas 217 115 660 336 count-up 0;
 #X obj 224 144 + 1;
