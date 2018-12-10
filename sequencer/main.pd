@@ -1,8 +1,8 @@
-#N canvas 378 130 1370 718 10;
+#N canvas 379 127 1370 718 10;
 #X obj 163 427 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 11112 1;
+-1 -1 0 1;
 #X obj 260 419 vsl 15 128 1 20 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3426 1;
+-1 -1 8940 1;
 #X floatatom 260 568 5 0 0 0 - - -, f 5;
 #X floatatom 464 202 5 0 0 0 - - -, f 5;
 #X floatatom 163 572 5 0 0 0 - - -, f 5;
@@ -39,9 +39,9 @@
 #X connect 14 0 2 0;
 #X connect 15 0 3 0;
 #X restore 73 75 pd metronome;
-#X obj 450 111 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 450 111 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 302 92 r beat-clock;
+#X obj 280 53 r beat-clock;
 #X obj 432 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 440 69 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -55,47 +55,24 @@
 #X floatatom 67 43 5 0 0 0 - - -, f 5;
 #X obj 187 605 -;
 #X floatatom 188 640 50 0 0 0 - - -, f 50;
-#X msg 118 51 0;
+#X msg 118 41 0;
 #X obj 69 104 s beat-clock;
 #X obj 870 235 text define -k seq-1;
-#A set 0 length 23.0333 \; 1 note 72 100 \; 1.24167 note 74 100 \;
-1.25833 note 72 0 \; 1.48333 note 74 0 \; 1.49167 note 76 100 \; 1.71667
-note 76 0 \; 2.00833 note 76 100 \; 2.525 note 76 0 \; 3.025 note 76
-100 \; 3.275 note 74 100 \; 3.31667 note 76 0 \; 3.525 note 72 100
-\; 3.525 note 74 0 \; 3.79167 note 72 0 \; 3.79167 note 74 100 \; 4.28333
-note 74 0 \; 5.05833 note 79 100 \; 5.3 note 77 100 \; 5.35 note 79
-0 \; 5.55833 note 76 100 \; 5.60833 note 77 0 \; 5.825 note 76 0 \;
-6.06667 note 76 100 \; 6.30833 note 77 100 \; 6.34167 note 76 0 \;
-6.54167 note 76 100 \; 6.58333 note 77 0 \; 6.80833 note 76 0 \; 7.05
-note 74 100 \; 7.51667 note 74 0 \; 7.775 note 72 100 \; 8.03333 note
-72 0 \; 8.98333 note 67 100 \; 8.99167 note 60 100 \; 9 note 64 100
-\; 9.45 note 60 0 \; 9.45833 note 67 0 \; 9.46667 note 72 100 \; 9.475
-note 64 0 \; 9.90833 note 72 0 \; 9.91667 note 74 100 \; 10.175 note
-74 0 \; 10.175 note 76 100 \; 10.4 note 72 100 \; 10.4 note 76 0 \;
-10.65 note 72 0 \; 10.6917 note 64 100 \; 10.7 note 67 100 \; 10.7083
-note 60 100 \; 11.4167 note 60 0 \; 11.425 note 67 0 \; 11.4417 note
-64 0 \; 11.9917 note 64 100 \; 12 note 60 100 \; 12.0083 note 67 100
-\; 12.425 note 60 0 \; 12.4417 note 64 0 \; 12.45 note 67 0 \; 12.9917
-note 65 100 \; 12.9917 note 62 100 \; 13 note 69 100 \; 13.425 note
-62 0 \; 13.4333 note 74 100 \; 13.4417 note 65 0 \; 13.45 note 69 0
-\; 13.875 note 76 100 \; 13.9167 note 74 0 \; 14.1417 note 77 100 \;
-14.1667 note 76 0 \; 14.375 note 74 100 \; 14.375 note 77 0 \; 14.675
-note 65 100 \; 14.6833 note 62 100 \; 14.6833 note 69 100 \; 14.6833
-note 74 0 \; 15.5583 note 62 0 \; 15.5583 note 69 0 \; 15.6083 note
-65 0 \; 16 note 62 100 \; 16 note 65 100 \; 16.0083 note 69 100 \;
-16.3333 note 62 0 \; 16.3417 note 69 0 \; 16.3417 note 65 0 \; 16.9583
-note 67 100 \; 16.9583 note 64 100 \; 16.975 note 71 100 \; 16.975
-note 79 100 \; 17.9667 note 67 0 \; 17.9667 note 79 0 \; 17.9667 note
-71 0 \; 17.975 note 64 0 \; 18.9 note 79 100 \; 18.9 note 64 100 \;
-18.9083 note 67 100 \; 18.9167 note 71 100 \; 19.1167 note 71 0 \;
-19.125 note 64 0 \; 19.125 note 67 0 \; 19.1333 note 79 0 \; 19.1583
-note 77 100 \; 19.35 note 77 0 \; 19.5833 note 76 100 \; 19.6083 note
-69 100 \; 19.6167 note 62 100 \; 19.6167 note 65 100 \; 19.825 note
-76 0 \; 19.825 note 69 0 \; 19.8417 note 65 0 \; 19.875 note 62 0 \;
-20.075 note 74 100 \; 20.35 note 74 0 \; 20.55 note 64 100 \; 20.55
-note 60 100 \; 20.55 note 67 100 \; 20.5583 note 72 100 \; 21.2417
-note 72 0 \; 21.35 note 60 0 \; 21.3833 note 64 0 \; 21.3917 note 67
-0 \;;
+#A set 0 length 13.9167 \; 1 note 72 100 \; 1.26667 note 72 0 \; 1.475
+note 74 100 \; 1.66667 note 74 0 \; 1.93333 note 76 100 \; 2.16667
+note 76 0 \; 2.45 note 77 100 \; 2.63333 note 77 0 \; 2.975 note 79
+100 \; 3.19167 note 79 0 \; 3.475 note 77 100 \; 3.675 note 77 0 \;
+3.96667 note 76 100 \; 4.19167 note 76 0 \; 4.46667 note 74 100 \;
+4.70833 note 74 0 \; 4.96667 note 72 100 \; 5.1 note 72 0 \; 5.19167
+note 72 100 \; 5.325 note 72 0 \; 5.44167 note 72 100 \; 5.6 note 72
+0 \; 5.70833 note 72 100 \; 5.84167 note 72 0 \; 5.96667 note 72 100
+\; 6.2 note 72 0 \; 6.425 note 71 100 \; 6.68333 note 71 0 \; 6.91667
+note 72 100 \; 7.41667 note 72 0 \; 7.975 note 72 100 \; 8.175 note
+71 100 \; 8.175 note 72 0 \; 8.34167 note 71 0 \; 8.43333 note 69 100
+\; 8.75833 note 69 0 \; 8.95 note 69 100 \; 9.4 note 69 0 \; 9.94167
+note 69 100 \; 10.125 note 69 0 \; 10.2 note 71 100 \; 10.4 note 71
+0 \; 10.45 note 72 100 \; 10.6917 note 72 0 \; 10.925 note 69 100 \;
+11.3917 note 69 0 \; 11.9417 note 69 100 \; 12.3167 note 69 0 \;;
 #X msg 870 208 clear;
 #X obj 869 15 r notes;
 #N canvas 4 50 450 300 prepend-event-name 0;
@@ -194,7 +171,7 @@ Aux: Start / Stop \;;
 #X msg 372 258 \; screenLine1 1: Tempo \$1 BPM \;;
 #X msg 110 264 \; screenLine1 1: Tempo \$1 BPM MIDI \;;
 #X obj 184 139 t f b;
-#X obj 184 111 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 184 111 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 184 84 sel 1;
 #X text 408 45 a MIDI enabled metronome with simple synth for tuning
@@ -285,7 +262,7 @@ up;
 #X obj 797 368 r notes;
 #X obj 747 453 pack 0 0 0, f 11;
 #X obj 351 231 route note;
-#X msg 162 43 100;
+#X msg 163 41 100;
 #X obj 747 478 route 1 2 3 4, f 15;
 #X obj 746 425 poly 4 1, f 11;
 #X obj 383 298 bag;

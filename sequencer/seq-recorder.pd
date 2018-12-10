@@ -1,4 +1,4 @@
-#N canvas 181 50 1219 861 10;
+#N canvas 184 50 1219 861 10;
 #X obj 280 424 seq-clocker-up;
 #N canvas 503 267 450 300 once 0;
 #X obj 109 71 inlet;
@@ -46,7 +46,7 @@
 #X obj 355 75 inlet;
 #X text 297 76 stop;
 #X obj 476 292 t a b;
-#N canvas 6 50 662 454 log-event 0;
+#N canvas 7 50 662 454 log-event 0;
 #X msg 216 292 1e+06;
 #X obj 184 261 t a b;
 #X obj 163 156 f;
