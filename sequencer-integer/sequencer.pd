@@ -1,4 +1,4 @@
-#N canvas 370 136 928 696 10;
+#N canvas 309 153 928 696 10;
 #X obj 316 513 mtof;
 #X obj 404 622 dac~;
 #N canvas 0 23 450 300 simple 0;
@@ -101,8 +101,8 @@
 #X obj 149 272 t f f;
 #X obj 214 464 print;
 #X obj 727 363 text define -k seq-1;
-#A set 0 length 1447 \; 0 note 72 100 \; 349 note 72 100 \; 667 note
-72 100 \; 877 note 72 100 \; 1063 note 72 100 \;;
+#A set 0 length 1440 \; 0 note 72 100 \; 353 note 72 100 \; 725 note
+72 100 \; 893 note 72 100 \; 1163 note 72 100 \;;
 #N canvas 0 23 450 300 simple 0;
 #X obj 111 133 osc~ 440;
 #X obj 210 121 vline~;
@@ -150,7 +150,7 @@
 #X floatatom 515 340 5 0 0 0 - - -;
 #X obj 507 367 text get seq-1 -1;
 #X obj 505 399 print;
-#X obj 456 213 clockint;
+#X obj 456 213 clockfix;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 3 0 54 0;
