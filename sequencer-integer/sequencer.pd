@@ -1,5 +1,5 @@
-#N canvas 98 81 940 775 10;
-#X obj 386 717 dac~;
+#N canvas 98 81 947 678 10;
+#X obj 296 561 dac~;
 #N canvas 181 202 326 445 metronome 0;
 #X obj 68 226 snapshot~;
 #X obj 94 191 bang~;
@@ -11,7 +11,7 @@
 #X obj 117 20 loadbang;
 #X obj 68 158 phasor~ 1;
 #X msg 93 50 60;
-#X obj 48 19 inlet;
+#X obj 43 13 inlet;
 #X obj 79 392 outlet;
 #X obj 66 318 * 360;
 #X obj 119 250 * 24;
@@ -19,6 +19,7 @@
 #X obj 119 292 / 24;
 #X text 124 321 divide clock into 360 steps;
 #X obj 70 365 change -1;
+#X obj 56 40 abs;
 #X connect 0 0 12 0;
 #X connect 1 0 0 0;
 #X connect 2 0 17 0;
@@ -30,16 +31,17 @@
 #X connect 7 0 9 0;
 #X connect 8 0 0 0;
 #X connect 9 0 4 0;
-#X connect 10 0 4 0;
+#X connect 10 0 18 0;
 #X connect 12 0 2 0;
 #X connect 13 0 14 0;
 #X connect 14 0 15 0;
 #X connect 17 0 11 0;
+#X connect 18 0 4 0;
 #X restore 456 182 pd metronome;
 #X floatatom 434 109 5 0 0 0 - - -;
 #X msg 485 117 0;
 #X msg 529 109 60;
-#X obj 456 264 s beat-clock;
+#X obj 478 261 s beat-clock;
 #X msg 525 84 1000;
 #X msg 489 82 500;
 #N canvas 0 23 450 300 simple 0;
@@ -60,14 +62,13 @@
 #X connect 5 0 2 0;
 #X connect 5 1 0 0;
 #X connect 6 0 7 0;
-#X restore 487 639 pd simple;
-#X msg 424 349 400;
-#X floatatom 410 265 5 0 0 0 - - -;
+#X restore 424 375 pd simple;
+#X msg 424 346 400;
+#X floatatom 424 284 5 0 0 0 - - -;
 #X obj 424 313 sel 0;
-#X obj 727 363 text define -k seq-1;
-#A set 0 length 1457 \; 0 note 72 100 \; 151 note 72 100 \; 353 note
-72 100 \; 461 note 72 100 \; 683 note 72 100 \; 1439 note 72 100 \;
-;
+#X obj 763 336 text define -k seq-1;
+#A set 0 length 2939 \; 0 note 72 100 \; 601 note 72 100 \; 1085 note
+72 100 \; 1803 note 72 100 \; 2354 note 72 100 \;;
 #N canvas 0 23 450 300 simple 0;
 #X obj 111 133 osc~ 440;
 #X obj 210 121 vline~;
@@ -97,19 +98,23 @@
 #X msg 739 113 note 72 100;
 #X obj 86 274 seq-player seq-1;
 #X obj 456 213 clockfix;
-#X msg 192 173 start;
-#X msg 170 151 start-sync;
-#X msg 259 219 loop \$1;
-#X obj 259 198 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X msg 191 79 start;
+#X msg 169 57 start-sync;
+#X msg 258 125 loop \$1;
+#X obj 258 104 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X msg 211 195 stop;
+#X msg 210 101 stop;
 #X obj 86 177 r beat-clock;
-#X floatatom 157 316 5 0 0 0 - - -;
+#X floatatom 179 303 5 0 0 0 - - -;
 #X msg 769 182 stop;
 #X msg 810 182 arm;
-#X obj 157 336 print;
-#X obj 218 319 print;
-#X obj 51 339 print;
+#X obj 119 302 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 263 162 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 263 184 quantize-length \$1;
+#X obj 180 324 / 360;
+#X floatatom 180 345 5 0 0 0 - - -;
 #X connect 1 0 23 0;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
@@ -130,9 +135,8 @@
 #X connect 20 1 18 0;
 #X connect 21 0 20 1;
 #X connect 22 0 14 0;
-#X connect 22 0 35 0;
-#X connect 22 1 30 0;
-#X connect 22 2 34 0;
+#X connect 22 1 33 0;
+#X connect 22 2 30 0;
 #X connect 23 0 5 0;
 #X connect 23 0 10 0;
 #X connect 24 0 22 1;
@@ -141,6 +145,9 @@
 #X connect 27 0 26 0;
 #X connect 28 0 22 1;
 #X connect 29 0 22 0;
-#X connect 30 0 33 0;
+#X connect 30 0 36 0;
 #X connect 31 0 20 2;
 #X connect 32 0 20 2;
+#X connect 34 0 35 0;
+#X connect 35 0 22 1;
+#X connect 36 0 37 0;
