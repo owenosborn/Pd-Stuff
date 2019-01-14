@@ -1,8 +1,8 @@
-#N canvas 354 96 1191 782 10;
+#N canvas 356 90 1191 782 10;
 #X msg 786 527 clear;
 #X msg 575 260 loop \$1;
 #X msg 638 261 quantize-length \$1;
-#X obj 67 74 inlet;
+#X obj 66 74 inlet;
 #X obj 67 103 s \$0beat-clock;
 #X obj 171 423 r \$0beat-clock;
 #X obj 223 495 seq-player \$1;
